@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default Font Sizes -->
+    <dimen name="font_size_welcome">28sp</dimen>
+    <dimen name="font_size_total_loan_balance">34sp</dimen>
+    <dimen name="font_size_balance_card">20sp</dimen>
+    <dimen name="font_size_history_title">18sp</dimen>
+    <dimen name="font_size_view_all_link">16sp</dimen>
+    <dimen name="font_size_card_label">16sp</dimen>
+    <dimen name="font_size_balance_label">14sp</dimen>
+</resources>
+    

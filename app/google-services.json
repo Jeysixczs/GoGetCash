@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "153609965837",
+    "project_id": "gogetcash-7d5f4",
+    "storage_bucket": "gogetcash-7d5f4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153609965837:android:b6c92750fcd943425aa044",
+        "android_client_info": {
+          "package_name": "com.jeysi.gogetcash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpwlOshZl9XOaJj-cMUp7mDnDSUvaqWOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153609965837:android:7b48050b942cf7e95aa044",
+        "android_client_info": {
+          "package_name": "com.jeysi.gogets"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpwlOshZl9XOaJj-cMUp7mDnDSUvaqWOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

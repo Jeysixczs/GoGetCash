@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GoGetCash</string>
+
+    <string name="no_results_found">No Results Found</string>
+    <string name="no_transactions_match_search">No transactions match your search.</string>
+    <string name="no_transactions_yet">No Transactions Yet</string>
+    <string name="transactions_will_appear_here">Your paid and unpaid loans will appear here.</string>
+</resources>
