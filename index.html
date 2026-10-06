@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GoGetCash – Download for Android</title>
+<meta name="description" content="GoGetCash is an Android app for managing cash-in and cash-out, tracking loans, and keeping tabs on your money movement. Download the latest APK.">
+<meta property="og:title" content="GoGetCash – Download for Android">
+<meta property="og:description" content="Cash-in / cash-out management, loan tracking and reports in one Android app.">
+<meta property="og:image" content="img/dashboard.jpg">
+<meta name="theme-color" content="#6750a4">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf8fd; --surface:#ffffff; --ink:#1d1a24; --muted:#625d70; --line:#e4dcf2;
+  --brand:#6750a4; --brand-d:#4f3d84; --accent:#f0e9fb; --warn:#fff6e0; --warn-ink:#6b4b00;
+  --logo-filter:none; --shadow:0 10px 30px rgba(54,34,102,.10);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#141118; --surface:#1e1a26; --ink:#f1ecfa; --muted:#aaa2bd; --line:#352e46;
+    --brand:#8a6fd6; --brand-d:#7258c2; --accent:#2a2140; --warn:#2b2410; --warn-ink:#f1d98a;
+    --logo-filter:invert(1); --shadow:0 10px 30px rgba(0,0,0,.45)}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;text-decoration:none}
+.logo img{width:34px;height:34px;filter:var(--logo-filter)}
+.nav a.link{font-size:.92rem;font-weight:600;color:var(--muted);text-decoration:none;margin-left:22px}
+.nav a.link:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--brand);color:#fff;font-weight:700;text-decoration:none;padding:15px 26px;border-radius:14px;font-size:1.05rem;box-shadow:0 8px 20px color-mix(in srgb,var(--brand) 35%,transparent);transition:transform .15s,background .15s}
+.btn:hover{background:var(--brand-d);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);box-shadow:none}
+.btn.ghost:hover{background:var(--accent);transform:translateY(-2px)}
+.btn svg{width:20px;height:20px;flex:none}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:8px}
+
+.hero{padding:64px 0 48px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.badge{display:inline-block;background:var(--accent);color:var(--brand-d);font-weight:700;font-size:.82rem;padding:6px 14px;border-radius:99px;margin-bottom:18px}
+@media (prefers-color-scheme:dark){.badge{color:#cdbcf5}}
+h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.08;letter-spacing:-.025em;font-weight:800}
+h1 span{color:var(--brand)}
+h1 .nb{font-weight:inherit;white-space:nowrap}
+.lead{font-size:1.15rem;color:var(--muted);margin:18px 0 28px;max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.meta{margin-top:16px;font-size:.88rem;color:var(--muted)}
+.meta b{color:var(--ink)}
+
+/* phone frames around real screenshots */
+.phone{background:#1d1a24;border-radius:34px;padding:8px;box-shadow:var(--shadow)}
+.phone img{border-radius:27px;width:100%;height:auto;background:var(--surface)}
+.phone-wrap{display:flex;justify-content:center;position:relative}
+.phone-wrap::before{content:"";position:absolute;inset:8% 6%;background:radial-gradient(closest-side,color-mix(in srgb,var(--brand) 38%,transparent),transparent);filter:blur(30px);z-index:0}
+.phone-wrap .phone{position:relative;z-index:1;width:270px;transform:rotate(3deg);box-shadow:var(--shadow),0 30px 60px color-mix(in srgb,var(--brand) 25%,transparent)}
+
+section{padding:56px 0}
+h2{font-size:clamp(1.6rem,3.4vw,2.2rem);letter-spacing:-.02em;font-weight:800;margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:32px;max-width:40em}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
+.ico{width:44px;height:44px;border-radius:13px;background:var(--accent);display:grid;place-items:center;margin-bottom:14px}
+.ico svg{width:22px;height:22px;fill:none;stroke:var(--brand);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.05rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.93rem}
+
+/* screenshot gallery */
+.shots{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.shot figure{margin:0}
+.shot .phone{border-radius:22px;padding:5px}
+.shot .phone img{border-radius:17px}
+.shot figcaption{text-align:center;font-weight:700;font-size:.88rem;margin-top:12px}
+.shot figcaption small{display:block;font-weight:500;color:var(--muted);font-size:.78rem}
+@media (max-width:1000px){
+  .shots{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;padding:4px 20px 18px;margin:0 -20px;-webkit-overflow-scrolling:touch}
+  .shot{flex:0 0 170px;scroll-snap-align:center}
+}
+
+.dl{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:34px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.facts{list-style:none}
+.facts li{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:.95rem}
+.facts li span:first-child{color:var(--muted)}
+.facts li span:last-child{font-weight:700;text-align:right}
+.steps{counter-reset:s;list-style:none}
+.steps li{counter-increment:s;position:relative;padding-left:44px;margin-bottom:16px;font-size:.95rem}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;display:grid;place-items:center;font-size:.85rem}
+.steps b{display:block}
+.steps span{color:var(--muted)}
+.note{background:var(--warn);color:var(--warn-ink);border-radius:14px;padding:14px 16px;font-size:.88rem;margin-top:20px}
+.others{margin-top:20px;font-size:.88rem;color:var(--muted)}
+.others a{color:var(--brand);font-weight:600}
+
+footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--muted);font-size:.86rem}
+footer .f{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{text-decoration:none;font-weight:600;margin-left:16px}
+footer a:first-child{margin-left:0}
+footer a:hover{color:var(--ink)}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;padding-top:36px}
+  .phone-wrap{order:-1}
+  .phone-wrap .phone{transform:none;width:230px}
+  .grid{grid-template-columns:1fr}
+  .dl{grid-template-columns:1fr;padding:24px}
+  .nav a.link.hide{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><img src="img/logo.png" alt="" width="34" height="34">GoGetCash</a>
+    <nav>
+      <a class="link hide" href="#features">Features</a>
+      <a class="link hide" href="#screens">Screenshots</a>
+      <a class="link hide" href="#download">Download</a>
+      <a class="link" href="https://github.com/Jeysixczs/GoGetCash" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <span class="badge">Android app · Free download</span>
+      <h1>Track every peso of your <span><b class="nb">cash-in</b> &amp; <b class="nb">cash-out</b></span>.</h1>
+      <p class="lead">GoGetCash helps you record transactions, manage borrowers and loans, and see where your money moves, all from one simple Android app.</p>
+      <div class="cta">
+        <a id="dlBtn" class="btn" href="https://github.com/Jeysixczs/GoGetCash/releases/latest/download/gogetcash.apk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
+          Download APK
+        </a>
+        <a class="btn ghost" href="#screens">See the app</a>
+      </div>
+      <p class="meta">Version <b id="ver">1.0</b> · Requires <b>Android 10</b> or higher · <span id="size">Free APK</span></p>
+    </div>
+
+    <div class="phone-wrap">
+      <div class="phone"><img src="img/dashboard.jpg" width="450" height="1000" alt="GoGetCash dashboard showing total amount loaned, GCash and on-hand balances, and quick actions"></div>
+    </div>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>Everything you need to run your cash flow</h2>
+      <p class="sub">Built for people who handle cash-in and cash-out for others and need clean records without the spreadsheet.</p>
+      <div class="grid">
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg></div><h3>Financial dashboard</h3><p>See total loan balances, on-hand cash and your latest transactions at a glance, with shortcuts to common actions.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3 4 7l4 4M4 7h16M16 21l4-4-4-4M20 17H4"/></svg></div><h3>Cash-in / Cash-out</h3><p>Record money received and sent out, with service fee calculation and contact list integration.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Loan &amp; loaner management</h3><p>Register borrowers, add to or reduce a loan, mark it as paid, and browse paid and unpaid lists.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18M7 14v4M12 8v10M17 11v7"/></svg></div><h3>Reports &amp; analytics</h3><p>Income breakdowns and a monthly trend chart so you can see how your money moves over time.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Secure sign-in</h3><p>Register and sign in with Firebase-backed authentication. "Remember Me" keeps you logged in on your device.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div><h3>Search &amp; filter</h3><p>Find any borrower or amount quickly across your history and transactions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="screens">
+    <div class="wrap">
+      <h2>A look inside</h2>
+      <p class="sub">Real screens from the app.</p>
+      <div class="shots">
+        <div class="shot"><figure><div class="phone"><img src="img/login.jpg" width="450" height="1000" loading="lazy" alt="GoGetCash login screen"></div><figcaption>Login<small>Secure sign-in</small></figcaption></figure></div>
+        <div class="shot"><figure><div class="phone"><img src="img/dashboard.jpg" width="450" height="1000" loading="lazy" alt="Dashboard screen"></div><figcaption>Dashboard<small>Balances at a glance</small></figcaption></figure></div>
+        <div class="shot"><figure><div class="phone"><img src="img/cashin.jpg" width="450" height="1000" loading="lazy" alt="Cash-in screen"></div><figcaption>Cash-In<small>Record money received</small></figcaption></figure></div>
+        <div class="shot"><figure><div class="phone"><img src="img/loan.jpg" width="450" height="1000" loading="lazy" alt="Loan details screen"></div><figcaption>Loan details<small>Track every borrower</small></figcaption></figure></div>
+        <div class="shot"><figure><div class="phone"><img src="img/cashout.jpg" width="450" height="1000" loading="lazy" alt="Cash-out screen"></div><figcaption>Cash-Out<small>Track payouts</small></figcaption></figure></div>
+        <div class="shot"><figure><div class="phone"><img src="img/analytics.jpg" width="450" height="1000" loading="lazy" alt="Financial reports screen"></div><figcaption>Reports<small>Income &amp; trends</small></figcaption></figure></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="wrap">
+      <h2>Download GoGetCash</h2>
+      <p class="sub">Grab the latest APK straight from the official GitHub release.</p>
+      <div class="dl">
+        <div>
+          <ul class="facts">
+            <li><span>App</span><span>GoGetCash</span></li>
+            <li><span>Latest version</span><span id="ver2">v1.0</span></li>
+            <li><span>Released</span><span id="date">Oct 6, 2026</span></li>
+            <li><span>File</span><span id="file">gogetcash.apk</span></li>
+            <li><span>Size</span><span id="size2">—</span></li>
+            <li><span>Android</span><span>10 (API 29)+</span></li>
+          </ul>
+          <div style="margin-top:22px">
+            <a id="dlBtn2" class="btn" href="https://github.com/Jeysixczs/GoGetCash/releases/latest/download/gogetcash.apk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>
+              <span id="dlLabel">Download gogetcash.apk</span>
+            </a>
+          </div>
+          <p class="others">Need the source? <a href="https://github.com/Jeysixczs/GoGetCash" target="_blank" rel="noopener">View the repository</a> or see the <a href="https://github.com/Jeysixczs/GoGetCash/releases/latest" target="_blank" rel="noopener">release notes</a>.</p>
+        </div>
+        <div>
+          <h3 style="margin-bottom:16px">How to install</h3>
+          <ol class="steps">
+            <li><b>Download the APK</b><span>Tap the download button on your Android phone.</span></li>
+            <li><b>Open the file</b><span>Find gogetcash.apk in your notifications or Downloads folder.</span></li>
+            <li><b>Allow the install</b><span>If asked, allow your browser or file manager to install unknown apps.</span></li>
+            <li><b>Tap Install</b><span>Then open GoGetCash, register an account, and start tracking.</span></li>
+          </ol>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap f">
+    <span>© <span id="yr">2026</span> GoGetCash. An independent tool, not affiliated with or endorsed by GCash or Mynt.</span>
+    <span>
+      <a href="https://github.com/Jeysixczs/GoGetCash" target="_blank" rel="noopener">Source</a>
+      <a href="https://github.com/Jeysixczs/GoGetCash/releases" target="_blank" rel="noopener">Releases</a>
+      <a href="https://github.com/Jeysixczs/GoGetCash/issues" target="_blank" rel="noopener">Report an issue</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id)};
+  $('yr').textContent = new Date().getFullYear();
+  fetch('https://api.github.com/repos/Jeysixczs/GoGetCash/releases/latest', {headers:{'Accept':'application/vnd.github+json'}})
+    .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+    .then(function(rel){
+      var apk = (rel.assets||[]).filter(function(a){return /\.apk$/i.test(a.name)})[0];
+      var tag = rel.tag_name || '';
+      if(tag){ $('ver').textContent = tag.replace(/^v/i,''); $('ver2').textContent = tag; }
+      if(rel.published_at){
+        $('date').textContent = new Date(rel.published_at).toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'});
+      }
+      if(apk){
+        $('dlBtn').href = apk.browser_download_url;
+        $('dlBtn2').href = apk.browser_download_url;
+        $('file').textContent = apk.name;
+        $('dlLabel').textContent = 'Download ' + apk.name;
+        var mb = (apk.size/1048576).toFixed(1) + ' MB';
+        $('size').textContent = mb; $('size2').textContent = mb;
+        $('count').textContent = apk.download_count.toLocaleString();
+      }
+    })
+    .catch(function(){ /* fallback links already point to the latest release */ });
+})();
+</script>
+</body>
+</html>
