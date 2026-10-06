@@ -57,11 +57,9 @@
 
 ## App Preview & Screenshots
 
-> *Add your app screenshots to a `screenshots/` directory in your repository and reference them below:*
-
-| Login Screen | Dashboard | Cash-In / Cash-Out | Loan Details |
-| :---: | :---: | :---: | :---: |
-| ![Login](screenshots/login.png) | ![Dashboard](screenshots/dashboard.png) | ![CashIn](screenshots/cash_in.png) | ![LoanDetails](screenshots/loan_details.png) |
+| Login Screen | Dashboard | Cash-In | Loan Details | Cash-Out | Analytics |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| <img src="screenshots/login.jpg" width="150" height="300"> | <img src="screenshots/dashboard.jpg" width="150" height="300"> | <img src="screenshots/cashin.jpg" width="150" height="300"> | <img src="screenshots/loan.jpg" width="150" height="300"> | <img src="screenshots/cashout.jpg" width="150" height="300"> | <img src="screenshots/analytics.jpg" width="150" height="300"> |
 
 ---
 
