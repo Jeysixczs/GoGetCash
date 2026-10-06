@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Use a Material Components theme as the parent -->
-    <style name="Theme.GoGetCash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!--
-        You can customize your theme attributes here if needed.
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
-        -->
-
+    <style name="Theme.GoGetCash" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your theme here -->
+        <item name="android:textColorPrimary">@color/textPrimary</item>
+        <item name="android:textColorSecondary">@color/textSecondary</item>
+        <item name="android:textColorHint">@color/textSecondary</item>
     </style>
-
-
 </resources>
-    
